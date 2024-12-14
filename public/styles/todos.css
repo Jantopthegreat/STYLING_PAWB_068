@@ -1,0 +1,104 @@
+body {
+    background-color: #f4f6f9;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar {
+    background-color: #6c63ff;
+    border-radius: 0;
+    padding: 10px 0;
+}
+
+.navbar a.navbar-brand {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-left: 15px;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #f8f9fa;
+    text-decoration: underline;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+footer {
+    background-color: #6c63ff;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.card.todo-card {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card.todo-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-body h5 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    color: #888;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+.btn-primary {
+    background-color: #6c63ff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #5a4fe1;
+    transform: scale(1.05);
+}
+
+.modal-content {
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    background-color: #6c63ff;
+    color: white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.modal-footer {
+    background-color: #f8f9fa;
+}

@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin-top: 50px;
+}
+
+.signup-container {
+    width: 100%;
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+h1, h4 {
+    font-weight: 600;
+    color: #333;
+}
+
+.lead {
+    color: #777;
+}
+
+.text-muted {
+    font-size: 0.9rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.form-control {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    font-size: 1rem;
+}
+
+.form-control:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 5px rgba(108, 99, 255, 0.5);
+}
+
+.signup-btn {
+    background-color: #9b84f1;
+    border: none;
+    font-weight: 500;
+    padding: 15px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.signup-btn:hover {
+    background-color: #9175f6;
+}
+
+.text-center a {
+    text-decoration: none;
+    color: #6c63ff;
+}
+
+.text-center a:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.logout-btn {
+    background-color: #ffffff;
+    color: #9b84f1;
+    border: 1px solid #9b84f1;
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #b5b5b5;
+    color: white;
+}
+
+footer {
+    background-color: #9b84f1;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}

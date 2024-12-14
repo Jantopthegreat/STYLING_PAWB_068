@@ -1,0 +1,25 @@
+<main class="d-flex justify-content-center align-items-center vh-100 bg-light">
+    <div class="card p-4 shadow-lg" style="max-width: 400px; width: 100%;">
+        <div class="text-center mb-4">
+            <img src="/images/logo.jpeg" alt="Logo" class="logo mb-4">
+            <h1 class="h4">SignIn to Your Account</h1>
+            <p class="lead text-muted">Masukkan detail akun Anda untuk melanjutkan.</p>
+        </div>
+        <form action="/signin" method="POST">
+            <div class="form-group mb-4">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control form-control-lg" id="username" name="username" required>
+            </div>
+            <div class="form-group mb-4">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control form-control-lg" id="password" name="password" required>
+            </div>
+            <button type="submit" class="signin-btn btn-block w-100">Sign In</button>
+        </form>
+        <div class="text-center mt-3">
+            <p class="mb-0">Belum punya akun? <a href="/signup" class="text-primary">Daftar sekarang</a></p>
+        </div>
+    </div>
+</main>
+
+<link rel="stylesheet" href="/styles/signin.css">

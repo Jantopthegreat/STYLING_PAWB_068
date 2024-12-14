@@ -1,0 +1,33 @@
+<main class="container my-5">
+    <div class="text-center mb-4">
+        <h1 class="display-4">Hubungi Kami</h1>
+        <p class="lead text-muted">Kirim pesan melalui formulir di bawah ini.</p>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8">
+            <div class="card border-0 shadow rounded-4">
+                <div class="card-body">
+                    <h3 class="card-title text-center mb-4">Pesan Anda</h3>
+                    <form action="/contact" method="POST">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nama</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Pesan</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="kirim-btn mt-4 px-5 py-3 rounded-pill">Kirim</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<link rel="stylesheet" href="/styles/contact.css">

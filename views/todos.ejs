@@ -1,0 +1,79 @@
+<main class="container mt-4">
+    <div class="text-center mb-4">
+        <h1 class="display-4">To-Do List</h1>
+        <button class="btn btn-primary mb-4" onclick="$('#addTodoModal').modal('show')">Tambah Kegiatan</button>
+
+        <div class="row">
+            <% todos.forEach(todo => { %>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card todo-card">
+                        <div class="card-body">
+                            <h5 class="card-title"><strong><%= todo.title %></strong></h5>
+                            <p class="card-text text-muted mb-2"><%= todo.description %></p>
+                            <p>
+                                <span class="badge <%= todo.is_done ? 'badge-success' : 'badge-warning' %>">
+                                    <%= todo.is_done ? 'Selesai' : 'Belum Selesai' %>
+                                </span>
+                            </p>
+                            <div class="d-flex justify-content-between">
+                                <% if (!todo.is_done) { %>
+                                    <form action="/todos/<%= todo.id %>/done" method="POST" class="d-inline">
+                                        <button type="submit" class="btn btn-success btn-sm">Tandai telah Selesai</button>
+                                    </form>
+                                <% } %>
+
+                                <button class="btn btn-primary btn-sm" onclick="showEditForm('<%= todo.id %>', '<%= todo.title %>', '<%= todo.description %>')">Edit</button>
+
+                                <form action="/todos/<%= todo.id %>/delete" method="POST" class="d-inline">
+                                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</main>
+
+<div class="modal" id="addTodoModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Tambah Kegiatan</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="/todos/add" method="POST">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="addTitle">Judul</label>
+                        <input type="text" class="form-control" id="addTitle" name="title" placeholder="Tambah Judul Kegiatan" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="addDescription">Deskripsi</label>
+                        <textarea class="form-control" id="addDescription" name="description" placeholder="Tambah Deskripsi dari Kegiatan" rows="2" required></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Tambah</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    function showEditForm(id, title, description) {
+        document.getElementById('editTodoForm').action = '/todos/edit/' + id;
+        document.getElementById('editTitle').value = title;
+        document.getElementById('editDescription').value = description;
+        $('#editTodoModal').modal('show');
+    }
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
